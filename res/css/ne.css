@@ -85,6 +85,13 @@ a:active {
     padding: 0px 16px 6px 16px;
     margin-top: -20px;
 }
+.span_space {
+    font-size: 3rem;
+    color: #1b1b1b;
+    float: left;
+    padding: 0px 16px 6px 16px;
+    margin-top: -20px;
+}
 .span_dir1:hover {
     background-color: #ffffff;
     color: #1b1b1b;
