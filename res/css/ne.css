@@ -168,11 +168,6 @@ a:active {
     padding: 4px 4px;
     margin: 2px 2px;
 }
-.p_side_contact {
-    display: block;
-    text-align: center;
-    font-size: 0.8rem;
-}
 /* Styling the unordered list element with the class ul_side */
 .ul_side {
     display: block;
