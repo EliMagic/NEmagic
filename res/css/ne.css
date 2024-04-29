@@ -229,8 +229,6 @@ a:active {
     line-height: 0.1rem;
 }
 .div_home_box:hover {
-    position: relative;
-    top: 8px;
     color: #ffffff;
     background-color: #1b1b1b;
     text-shadow: -1px 1px 5px #ffffff;
@@ -242,6 +240,8 @@ a:active {
 }
 /* Styling the hyperlink element hover state with the class a_home_box */
 .a_home_box:hover {
+    position: relative;
+    top: 8px;
     color: #ffffff;
     background-color: #1b1b1b;
     text-shadow: -1px 1px 5px #ffffff;
