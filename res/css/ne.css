@@ -16,9 +16,9 @@ article {
 }
 footer {
     text-align: center;
-    padding-top: 100px;
-    min-height: 29.6px;
     vertical-align: text-bottom;
+    padding-top: 100px;
+    padding-bottom: 30px;
 }
 /* Styling the list element */ 
 li {
