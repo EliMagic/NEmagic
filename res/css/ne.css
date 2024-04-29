@@ -258,12 +258,6 @@ a:active {
 }
 .aboutme_article_div {
     padding-top: 30px;
-    margin: 20px auto;
-    width: 270px;
-    background-color: #202020;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 /* Styling the h2 heading element with the class h2_title */
 .h2_title {
