@@ -1,0 +1,312 @@
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+
+/* Setting the color for the body of the website page */
+body {    
+    background-color: #262626;
+    color: #ffffff;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Centering alignment of the content in the header element */
+header {
+    text-align: center;
+    padding-bottom: 45px;
+}
+/* Centering alignment of the content in the article element */
+article {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+footer {
+    text-align: center;
+    vertical-align: text-bottom;
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+a:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover {
+    text-decoration: none;
+    color: #00ffaa;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+
+/* Styling the navigation element with the class nav_main */
+.nav_main {
+    top: 0;
+    position: sticky;
+    background-color: #262626;
+    padding: 30px 30px;
+    text-align: center;
+    min-height: 29.6px;
+    transform: initial;
+    z-index: 2;
+}
+/* Styling the hyperlink element for the directory link and it's hover state */
+.nav_main_side_menu_button {
+    font-size: 3rem;
+    float: left;
+    padding: 0px 16px 6px 16px;
+    margin-top: -20px;
+}
+.nav_main_side_menu_button:hover {
+    background-color: #ffffff;
+    color: #1b1b1b;
+    filter: none;
+    border: 1px  solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 15px #ffffff;
+    padding: 0px 15px 5px 15px;
+}
+
+.nav_main_links_container {
+    float: right;
+}
+/* Styling the hyperlink element for the main links and it's hover state */
+.nav_main_links a {
+    color: #dddddd;
+    float: right;
+    padding: 5px 5px;
+    margin: 2px 2px;
+    text-decoration: none;
+}
+.nav_main_links a:visited {
+    color: #dddddd;
+    float: right;
+    padding: 5px 5px;
+    margin: 2px 2px;
+    text-decoration: none;
+}
+.nav_main_links a:hover {
+    float: right;
+    padding: 3px 5px;
+    color: #00ffaa;
+}
+
+/* Styling the navigation element with the class nav_side */
+.nav_side {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    border-right: 1px solid #1b1b1b;
+    top: 0;
+    background-color: #1b1b1b;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    white-space: nowrap;
+    z-index: 3;
+}
+.closebtn_side {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    margin: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.closebtn_side div {
+    position: relative;
+    top: -6px;
+    text-align: center;
+}
+.closebtn_side div:hover{
+    background-color: #ffffff;
+    color: #1b1b1b;
+    border: 1px  solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 15px #ffffff;
+}
+
+/* Styling the heading 1 element with the class h1_side */
+.h1_side {
+    display: block;
+    text-align: center;
+}
+/* Styling the hyperlink element with the class a_side */
+.a_side{
+    display: block;
+    font-size: large;
+    font-weight: bold;
+    padding: 4px 4px;
+    margin: 2px 2px;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+
+/* Styling the section element with the class section_home */
+.section_home {
+    flex: 1;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.header_img{
+    margin-top: 15px;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+
+/* Styling the division element with the class div_image_2 */
+.div_home_p{
+    padding-bottom: 45px;
+}
+/* Styling the division element with the class div_image_2 */
+@media only and (max-width: 600px) {
+    .div_home_a {
+        display: grid;
+    }
+}
+.div_home_div {
+    display:grid;
+}
+.div_home_a {
+    display:flex;
+}
+/* Styling the hyperlink element hover state with the class a_home_box */
+@media only and (max-width: 600px) {
+    .a_home_box {
+        margin: 0.25vh 5vw 0.25vh 5vw;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        background-color: #191919;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 1.5rem;
+        line-height: 0.1rem;
+    }
+}
+@media only and (max-width: 600px) {
+    .a_home_box:hover {
+        color: #ffffff;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        background-color: #1b1b1b;
+        box-shadow: 0px 2px 15px #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        z-index: 2;
+    }
+}
+.a_home_box {
+    flex: 1;
+    margin: 0.25vh 5vw 0.25vh 5vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    background-color: #191919;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    line-height: 0.1rem
+}
+.a_home_box:hover {
+    color: #ffffff;
+    padding-bottom: 0vh;
+    background-color: #1b1b1b;
+    box-shadow: 0px 2px 15px #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 1.75rem;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+
+/* Styling the navigation element with the class div_1 */
+.aboutme_article_div {
+    margin: 20px auto;
+    width: 270px;
+    background-color: #202020;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Styling the h2 heading element with the class h2_title */
+.aboutme_article_div_h2 {
+    margin: 0px;
+    background-color: #111111;
+    border-bottom: 1px solid #dddddd;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+/* Styling the list element */ 
+li {
+    text-align: left; /* Aligning the content to the left in the list elements */
+    margin-bottom: 10px; /* Adds spacing at the bottom of each list item */
+}
+/* Styling the table elements */
+table {
+    width: 100%;
+}
+table, td, th {
+    border:1px solid #000000;
+}
+th {
+    background-color:#1b1b1b;
+    color:#ffffff;
+}
+.th_1 {
+    width: 20%;
+}
+.th_2 {
+    width: 40%;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* Styling the heading 3 element with the class h3_side */
+.h3_side {
+    display: block;
+    padding: 4px 4px;
+    margin: 2px 2px;
+}
+.p_side {
+    display: block;
+    padding: 4px 4px;
+    margin: 2px 2px;
+}
+/* Styling the unordered list element with the class ul_side */
+.ul_side {
+    display: block;
+    list-style: none;
+    margin-top: 2px;
+}
+
+/* Styling the paragraph element with the class article_p */
+.article_p {
+    text-align: justify;
+    word-wrap: break-word;
+    text-indent: 50px;
+}
