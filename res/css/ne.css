@@ -176,7 +176,7 @@ a:hover {
     padding-bottom: 45px;
 }
 /* Styling the division element with the class div_image_2 */
-@media only and (max-width: 600px) {
+@media screen {
     .div_home_a {
         display: grid;
     }
@@ -188,7 +188,7 @@ a:hover {
     display:flex;
 }
 /* Styling the hyperlink element hover state with the class a_home_box */
-@media only and (max-width: 600px) {
+@media screen {
     .a_home_box {
         margin: 0.25vh 5vw 0.25vh 5vw;
         padding-top: 1vh;
@@ -201,7 +201,7 @@ a:hover {
         line-height: 0.1rem;
     }
 }
-@media only and (max-width: 600px) {
+@media screen {
     .a_home_box:hover {
         color: #ffffff;
         padding-top: 1vh;
