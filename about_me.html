@@ -10,29 +10,38 @@
     <body>
         <!-- Main navigation menu */ -->
         <nav class="nav_main">
-            <span class="nav_main_side_menu_button" onclick="openNav()">&#9776; </span>
+            <div class="nav_main_side_menu_button" onclick="openNav()">&#9776;</div>
             <div class="nav_main_links">
-                <!-- Hyperlink to the website's about me page */ -->
+                <!-- Hyperlink to the About Me page */ -->
                 <a href="https://elimagic.github.io/NEmagic/about_me">About Me</a>
-                <!-- Hyperlink to the website's home page */ -->
-                <a href="https://elimagic.github.io/NEmagic/">Studies</a>
-                <!-- Hyperlink to the website's home page */ -->
-                <a href="https://elimagic.github.io/NEmagic/">Marketplaces</a>
-                <!-- Hyperlink to the website's home page */ -->
-                <a href="https://elimagic.github.io/NEmagic/">Servies</a>
-                <!-- Hyperlink to the website's home page */ -->
+                <!-- Hyperlink to the Home page */ -->
                 <a href="https://elimagic.github.io/NEmagic/">Home</a>
             </div>        
         </nav>
         <div>
+            <nav id="mySidenav" class="nav_side">
+                <div class="closebtn_side">
+                    <div onclick="closeNav()">&times;</div>
+                </div>
+                <h1 class="h1_side">Subjects</h1>
+                <!-- Hyperlink to the Studies page  -->
+                <a class="a_side" href="https://elimagic.github.io/NEmagic/under_construction">Studies</a>
+                <!-- Hyperlink to the Marketplaces page */ -->
+                <a class="a_side" href="https://elimagic.github.io/NEmagic/under_construction">Marketplaces</a>
+                <!-- Hyperlink to the Servies page */ -->
+                <a class="a_side" href="https://elimagic.github.io/NEmagic/under_construction">Servies</a>                
+                <!-- Hyperlink to the Articles page  -->
+                <a class="a_side" href="https://elimagic.github.io/NEmagic/under_construction">Articles</a>
+            </nav>
             <section class="section_home">
                 <!-- Information about me -->
                 <header>
                     <img class="aboutme_header_img" src="res/images/ne_AboutMe.png" alt="About Me Image">
                 </header>
-                <article>
-                    <h1>About Me</h1>
-                    <p><strong>Nicholas Epperson</strong></p>
+                <article class="aboutme_article">
+                    <h1 class="aboutme_article_h1">About Me</h1>
+                    <hr class="aboutme_article_hr">
+                    <p><strong>Nick Epperson</strong></p>
                     <p>Student at Rasmussen University</p>
                     <p>Software Application Development Associate's Degree for Data Analytics Specialization</p>
                     <div style="position: relative; top: 30px;">
@@ -58,5 +67,6 @@
                 </footer>
             </section>
         </div>
+        <script src="res/js/ne.js"></script>
     </body>
 </html>
