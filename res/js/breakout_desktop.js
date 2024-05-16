@@ -11,8 +11,8 @@ const ballRadius = 10;
 const paddleHeight = 10;
 const paddleWidth = 75;
 let paddleX = (canvas.width - paddleWidth) / 2;
-const brickRowCount = 3;
-const brickColumnCount = 5;
+const brickRowCount = 12;
+const brickColumnCount = 14;
 const brickWidth = 75;
 const brickHeight = 20;
 const brickPadding = 10;
@@ -27,7 +27,8 @@ const speedMultiplier = 1.1; // Multiplier
 
 
 // Colors for each row of bricks
-const brickColors = ["#FF0000", "#00FF00", "#0000FF"]; // Red, Green, Blue
+const brickColors = ["#FF0000", "#FF7F00", "#FFFF00", "#7FFF00", "#00FF00", "#00FF7F",
+                    "#00FFFF", "#007FFF", "#0000FF", "#7F00FF", "#FF00FF", "#FF007F"]; // Red, Green, Blue
 
 // Initialize bricks
 const bricks = [];
@@ -55,13 +56,13 @@ function adjustCanvasSize() {
         canvasHeight = screenHeight - (2 * margin * screenHeight);
     } else {
         // For desktop devices
-        canvasWidth = 480; // Your default canvas width for desktop
-        canvasHeight = 320; // Your default canvas height for desktop
+        canvasWidth = 1280; // Your default canvas width for desktop
+        canvasHeight = 720; // Your default canvas height for desktop
     }
 
     // Set canvas size
     canvas.width = canvasWidth;
-    canvas.height = canvasHeight;
+    canvas.height = canvasHeight * .9;
 }
 
 
