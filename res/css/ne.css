@@ -11,6 +11,20 @@ body {
     margin: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.game_body {
+    background-color: #262626;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.game_canvas {
+
+    background-color: #2f2f2f;
+    border: 1px solid #dddddd;
+}
 /* Centering alignment of the content in the header element */
 header {
     text-align: center;
