@@ -42,6 +42,29 @@ function isMobileDevice() {
     return /Mobi|Android/i.test(navigator.userAgent);
 }
 
+function adjustCanvasSize() {
+    const margin = 0.05; // 5% margin
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    // Calculate canvas dimensions with margin
+    let canvasWidth, canvasHeight;
+    if (isMobileDevice()) {
+        // For mobile devices
+        canvasWidth = screenWidth - (2 * margin * screenWidth);
+        canvasHeight = screenHeight - (2 * margin * screenHeight);
+    } else {
+        // For desktop devices
+        canvasWidth = 480; // Your default canvas width for desktop
+        canvasHeight = 320; // Your default canvas height for desktop
+    }
+
+    // Set canvas size
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+}
+
+
 // Event listeners for paddle control based on device
 if (isMobileDevice()) {
     // Mobile device controls (touch events)
@@ -211,5 +234,11 @@ function draw() {
 
     requestAnimationFrame(draw);
 }
+
+// Event listener for window resize
+window.addEventListener("resize", adjustCanvasSize, false);
+
+// Initial adjustment on page load
+adjustCanvasSize();
 
 draw();
