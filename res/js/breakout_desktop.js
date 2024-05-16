@@ -57,7 +57,7 @@ function adjustCanvasSize() {
     let canvasWidth, canvasHeight;
     if (isMobileDevice()) {
         // For mobile devices
-        canvasWidth = screenWidth - (2 * (margin - (margin * 0.05)) * screenWidth);
+        canvasWidth = screenWidth - (2 * (margin - (margin * 0.10)) * screenWidth);
         canvasHeight = screenHeight - (2 * (margin - (margin * 0.05)) * screenHeight);
     } else {
         // For desktop devices
