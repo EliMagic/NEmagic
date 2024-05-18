@@ -151,8 +151,8 @@ function drawGrass() {
 function drawRoad() {
     
     if (isMobileDevice()) {
-        ctx.drawImage(road_image, canvasWidth / 2, roadOffsetY, canvasWidth, canvasHeight);
-        ctx.drawImage(road_image, canvasWidth / 2, roadOffsetY - canvasHeight,canvasWidth, canvasHeight);
+        ctx.drawImage(road_image, 0, roadOffsetY, canvasWidth, canvasHeight);
+        ctx.drawImage(road_image, 0, roadOffsetY - canvasHeight,canvasWidth, canvasHeight);
 
         roadOffsetY += roadSpeed;
         if ( roadOffsetY >= canvasHeight){
