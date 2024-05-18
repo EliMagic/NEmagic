@@ -44,5 +44,5 @@ function init() {
 }
 
 if (!isMobileDevice()) {
-    init();
+    //init();
 }
