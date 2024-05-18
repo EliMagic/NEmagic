@@ -279,6 +279,7 @@ function updateGame() {
         drawGrass();
         drawRoad();
         drawCar();
+        drawScore();
         generateObstacles1();
         generateObstacles2();
         if (detectCollision1() || detectCollision2()) {
