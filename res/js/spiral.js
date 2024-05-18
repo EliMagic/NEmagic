@@ -8,11 +8,6 @@ let speed = 0.065;
 let effect_x = 0.1;
 let effect_y = 0.1;
 
-function isMobileDevice() {
-    
-    return /Mobi|Android/i.test(navigator.userAgent);
-}
-
 function createTornadoCharacter() {
     const character = document.createElement('div');
     character.classList.add('tornado-character');
@@ -43,6 +38,4 @@ function init() {
     animateTornado();
 }
 
-if (!isMobileDevice()) {
-    //init();
-}
+init();
