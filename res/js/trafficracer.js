@@ -104,8 +104,8 @@ function adjustCanvasSize() {
         
         lane_1 = canvasWidth * 0.2;
         lane_2 = canvasWidth * 0.35;
-        lane_3 = canvasWidth * 0.55;
-        lane_4 = canvasWidth * 0.65;
+        lane_3 = canvasWidth * 0.52;
+        lane_4 = canvasWidth * 0.66;
         lanes1.push(lane_1, lane_2);
         lanes2.push(lane_3, lane_4);
     } else {
