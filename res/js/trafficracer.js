@@ -105,8 +105,8 @@ function adjustCanvasSize() {
         carX = canvasWidth / 2; // Initial X position of the car
         carY = canvasHeight - car_height - 150; // Y position of the car
         
-        lane_1 = canvasWidth * 0.2;
-        lane_2 = canvasWidth * 0.35;
+        lane_1 = canvasWidth * 0.21;
+        lane_2 = canvasWidth * 0.36;
         lane_3 = canvasWidth * 0.52;
         lane_4 = canvasWidth * 0.67;
         lanes1.push(lane_1, lane_2);
@@ -244,6 +244,14 @@ function generateObstacles2() {
         const randomCarImage2 = traffic2[Math.floor(Math.random() * traffic2.length)];
         obstacles2.push({ x: obstacleX2, y: -obstacleHeight, image: randomCarImage2 });
     }
+}
+
+function drawScore() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillText(score_name, 8, 20);
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText(score, 8 + ctx.measureText(score_name).width, 20);
 }
 
 function resetGame() {
