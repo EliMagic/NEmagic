@@ -57,8 +57,8 @@ function adjustCanvasSize() {
     let canvasWidth, canvasHeight;
     if (isMobileDevice()) {
         // For mobile devices
-        canvasWidth = screenWidth - ((2 * margin_width * screenWidth) * 1.5); // 972
-        canvasHeight = screenHeight - ((2 * margin_height * screenHeight) * 2.5); // 1728
+        canvasWidth = screenWidth - ((2 * margin * screenWidth) * 1.5); // 972
+        canvasHeight = screenHeight - ((2 * margin * screenHeight) * 2.5); // 1728
     } else {
         // For desktop devices
         canvasWidth = 1280; // Your default canvas width for desktop
