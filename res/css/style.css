@@ -1,0 +1,22 @@
+.bg_body {
+    background-color: black;
+    color: rgba(255, 255, 255, 0.25); /* #898989, rgba(117, 255, 0, 0.19), */
+    font-family: Arial, sans-serif;
+    
+    
+}
+
+#animationContainer {
+    position: fixed; /* absolute, fixed, */
+    align-content: center;
+    top: 50%; /* 50%, 70%, */
+    right: -100%;
+    transform: translate(-27%, -16%) scale3d(1.25,1.5,1); /* (-50%, -90%), */
+    z-index: 1;
+}
+
+.tornado-character {
+    display: inline-block;
+    font-size: 20px;
+    
+}
