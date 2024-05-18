@@ -408,7 +408,7 @@ th {
         background-color: #262626;
         padding: 10px 10px;
         min-height: 50px;
-        z-index: 10;
+        z-index: 9;
     }
 }
 
