@@ -29,8 +29,10 @@ let lane_4;
 const lanes1 = [];
 const lanes2 = [];
 
-const car_width = 40;
-const car_height = 80;
+//let car_width = 40;
+//let car_height = 80;
+let car_width = 60;
+let car_height = 120;
 let carX; // Initial X position of the car
 let carY; // Y position of the car
 
@@ -58,8 +60,8 @@ const traffic2 = [taxi_up, audi_up, viper_up, truck_up];
 
 const obstacles1 = [];
 const obstacles2 = [];
-const obstacleWidth = 50; // Adjusted obstacle width for lanes
-const obstacleHeight = 100;
+let obstacleWidth = 60; // Adjusted obstacle width for lanes
+let obstacleHeight = 120;
 
 let score = 0;
 let isMobile = false;
@@ -92,8 +94,8 @@ function adjustCanvasSize() {
     // Calculate canvas dimensions with margin
     if (isMobileDevice()) {
         // For mobile devices
-        canvasWidth = screenWidth - (2 * (margin - (margin * 0.05)) * screenWidth);
-        canvasHeight = screenHeight - (2 * margin * screenHeight);
+        canvasWidth = screenWidth - ((2 * margin_width * screenWidth) * 1.5); // 972
+        canvasHeight = screenHeight - ((2 * margin_height * screenHeight) * 2.5);
         // 640 px
         grassHeight = canvasHeight;
         // 640 px
@@ -108,6 +110,13 @@ function adjustCanvasSize() {
         lane_4 = canvasWidth * 0.66;
         lanes1.push(lane_1, lane_2);
         lanes2.push(lane_3, lane_4);
+        
+        car_width = 40;
+        car_height = 80;
+        
+        obstacleWidth = 40; // Adjusted obstacle width for lanes
+        obstacleHeight = 80;
+        
     } else {
         // For desktop devices
         canvasWidth = 1380; // Your default canvas width for desktop
@@ -171,7 +180,7 @@ function drawRoad() {
 }
 
 function drawCar() {
-    ctx.drawImage(car1, carX, carY);
+    ctx.drawImage(car1, carX, carY, car_width, car_height);
     console.log(carX);
 }
 
