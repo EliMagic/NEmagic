@@ -102,10 +102,10 @@ function adjustCanvasSize() {
         carX = canvasWidth / 2; // Initial X position of the car
         carY = canvasHeight - car_height - 50; // Y position of the car
         
-        lane_1 = canvasWidth * 0.29;
-        lane_2 = canvasWidth * 0.43;
-        lane_3 = canvasWidth * 0.59;
-        lane_4 = canvasWidth * 0.75;
+        lane_1 = canvasWidth * 0.2;
+        lane_2 = canvasWidth * 0.3;
+        lane_3 = canvasWidth * 0.5;
+        lane_4 = canvasWidth * 0.6;
         lanes1.push(lane_1, lane_2);
         lanes2.push(lane_3, lane_4);
     } else {
