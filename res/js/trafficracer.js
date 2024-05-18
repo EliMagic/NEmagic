@@ -151,13 +151,28 @@ function drawGrass() {
 }
 
 function drawRoad() {
-    ctx.drawImage(road_image, grassWidth, roadOffsetY, roadWidth, canvasHeight);
-    ctx.drawImage(road_image, grassWidth, roadOffsetY - canvasHeight, roadWidth, canvasHeight);
     
-    roadOffsetY += roadSpeed;
-    if ( roadOffsetY >= canvasHeight){
-        roadOffsetY = 0;
+    if (isMobileDevice()) {
+        ctx.drawImage(road_image, grassWidth, roadOffsetY);
+        ctx.drawImage(road_image, grassWidth, roadOffsetY - canvasHeight);
+
+        roadOffsetY += roadSpeed;
+        if ( roadOffsetY >= canvasHeight){
+            roadOffsetY = 0;
+        }
+    } else {
+        
+        ctx.drawImage(road_image, grassWidth, roadOffsetY, roadWidth, canvasHeight);
+        ctx.drawImage(road_image, grassWidth, roadOffsetY - canvasHeight, roadWidth, canvasHeight);
+
+        roadOffsetY += roadSpeed;
+        if ( roadOffsetY >= canvasHeight){
+            roadOffsetY = 0;
+        }
+        
     }
+    
+    
 }
 
 function drawCar() {
