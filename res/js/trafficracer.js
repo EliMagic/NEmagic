@@ -94,11 +94,8 @@ function adjustCanvasSize() {
         // For mobile devices
         canvasWidth = screenWidth - (2 * (margin - (margin * 0.05)) * screenWidth);
         canvasHeight = screenHeight - (2 * margin * screenHeight);
-        laneWidth = canvasWidth / 4; // Divide canvas into 4 lanes
         // 160 px
         lane_2_width = canvasWidth / 8; // Divide canvas into 2 lanes
-        // 320 px
-        grassWidth = (canvasWidth - laneWidth * 2) / 2; // Grass areas on the sides
         // 640 px
         grassHeight = canvasHeight;
         // 640 px
@@ -169,10 +166,7 @@ function drawRoad() {
         if ( roadOffsetY >= canvasHeight){
             roadOffsetY = 0;
         }
-        
     }
-    
-    
 }
 
 function drawCar() {
@@ -249,18 +243,32 @@ function resetGame() {
 }
 
 function updateGame() {
-    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-    drawGrass();
-    drawRoad();
-    drawCar();
-    generateObstacles1();
-    generateObstacles2();
-    if (detectCollision1() || detectCollision2()) {
-        alert('Game Over! Your score: ' + score);
-        resetGame();
+    if (isMobileDevice()) {
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+        drawRoad();
+        drawCar();
+        generateObstacles1();
+        generateObstacles2();
+        if (detectCollision1() || detectCollision2()) {
+            alert('Game Over! Your score: ' + score);
+            resetGame();
+        }
+        score++;
+        requestAnimationFrame(updateGame);
+    } else {
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+        drawGrass();
+        drawRoad();
+        drawCar();
+        generateObstacles1();
+        generateObstacles2();
+        if (detectCollision1() || detectCollision2()) {
+            alert('Game Over! Your score: ' + score);
+            resetGame();
+        }
+        score++;
+        requestAnimationFrame(updateGame);
     }
-    score++;
-    requestAnimationFrame(updateGame);
 }
 
 document.addEventListener('keydown', (e) => {
