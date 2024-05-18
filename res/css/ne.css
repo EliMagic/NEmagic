@@ -7,21 +7,32 @@
 /* Setting the color for the body of the website page */
 body {    
     background-color: #262626;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.45); /* #898989, rgba(117, 255, 0, 0.19), */
     margin: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Centering alignment of the content in the header element */
 header {
+    position: relative; 
+    color: #ffffff;
     text-align: center;
     padding-bottom: 45px;
+    z-index: 4;
+}
+
+.header_home {
+    position: relative; 
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 0;
+    z-index: 4;
 }
 /* Centering alignment of the content in the article element */
 article {
+    color: #ffffff;
     position: relative;
     text-align: center;
-    z-index: 1;
 }
 
 footer {
@@ -47,6 +58,25 @@ a:hover {
     color: #00ffaa;
 }
 
+span {
+    text-decoration: none;
+    color: #ffffff;
+}
+span:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+span:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+span:hover {
+    text-decoration: none;
+    color: #00ffaa;
+}
+
+
+
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /*                  Navigation Menus                  */
@@ -57,28 +87,27 @@ a:hover {
 .nav_main {
     top: 0;
     position: sticky;
-    background-color: #262626;
+    background-color: black;
     padding: 30px 30px;
     text-align: center;
     min-height: 29.6px;
     transform: initial;
-    z-index: 2;
+    z-index: 9;
 }
 /* Styling the hyperlink element for the directory link and it's hover state */
 .nav_main_side_menu_button {
+    position: relative;
     font-size: 3rem;
     float: left;
-    padding: 0px 16px 6px 16px;
+    padding: 0px 15px 5px 15px;
     margin-top: -20px;
+    top: -1px;
+
 }
 .nav_main_side_menu_button:hover {
-    background-color: #ffffff;
-    color: #1b1b1b;
     filter: none;
-    border: 1px  solid #dddddd;
-    border-radius: 5px;
-    box-shadow: 0px 2px 15px #ffffff;
     padding: 0px 15px 5px 15px;
+    top: 1px;
 }
 
 .nav_main_links_container {
@@ -117,7 +146,7 @@ a:hover {
     transition: 0.5s;
     padding-top: 60px;
     white-space: nowrap;
-    z-index: 3;
+    z-index: 9;
 }
 .closebtn_side {
     position: absolute;
@@ -134,11 +163,7 @@ a:hover {
     text-align: center;
 }
 .closebtn_side div:hover{
-    background-color: #ffffff;
-    color: #1b1b1b;
-    border: 1px  solid #dddddd;
-    border-radius: 5px;
-    box-shadow: 0px 2px 15px #ffffff;
+    color: #ffffff;
 }
 
 /* Styling the heading 1 element with the class h1_side */
@@ -173,7 +198,7 @@ a:hover {
 }
 
 .article_home_h1{
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 .article_home_hr{
     position: relative; 
@@ -201,12 +226,14 @@ a:hover {
     flex: 1;
     margin: 0.25vh 5vw 0.25vh 5vw;
     padding: 3vh;
-    background-color: #191919;
+    background-color: rgba(25, 25, 25, 0.77);
     border: 1px solid #dddddd;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 1.5rem;
-    line-height: 0.1rem
+    line-height: 0.1rem;
+    z-index: 4;
+
 }
 .a_home_box:hover {
     color: #ffffff;
@@ -225,7 +252,7 @@ a:hover {
 /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 
 .game_body {
-    background-color: #262626;
+    background-color: #000000;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
@@ -233,16 +260,30 @@ a:hover {
     align-items: center;
     height: 100vh;
 }
-.game_canvas {
-    background-color: #2f2f2f;
-    border: 1px solid #dddddd;
+
+.game_body_trafficracer {
+    background-color: #1e1e1e;
+    border: 2px solid #dddddd;
+    justify-content: center;
+    align-items: center
+}
+
+.game_canvas_breakout {
+    background-color: #1e1e1e;
+    border: 2px solid #dddddd;
     justify-content: center;
     align-items: center;
+}
+.game_canvas_trafficracer {
+    background-color: #808080;
+    display: block;
+    margin: 0 auto;
 }
 .section_game {
     justify-content: center;
     align-items: center;
 }
+
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
@@ -364,10 +405,10 @@ th {
 @media screen and (max-width: 1080px) {
     .nav_main {
         position: sticky;
-        background-color: #262626;
+        background-color: black;
         padding: 10px 10px;
         min-height: 50px;
-        z-index: 2;
+        z-index: 10;
     }
 }
 
@@ -383,16 +424,11 @@ th {
 @media screen and (max-width: 1080px) {
     .nav_main_side_menu_button:hover {
         position: relative;
-        top: 14px;
+        top: 16px;
         font-size: 2.5rem;
         float: left;
         
-        background-color: #ffffff;
-        color: #1b1b1b;
         filter: none;
-        border: 1px  solid #dddddd;
-        border-radius: 5px;
-        box-shadow: 0px 2px 15px #ffffff;
     }
 }
 
@@ -403,18 +439,8 @@ th {
         top: 9px;
     }
 }
-@media screen and (max-width: 1080px) {
-    .nav_main_links a:visited {
-        position: relative;
-        top: 9px;
-    }
-}
-@media screen and (max-width: 1080px) {
-    .nav_main_links a:hover {
-        position: relative;
-        top: 9px;
-    }
-}
+
+
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /*                      Home Page                     */
@@ -422,7 +448,7 @@ th {
 
 @media screen and (max-width: 1080px) {
     .article_home_h1{
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 }
 @media screen and (max-width: 1080px) {
@@ -445,7 +471,7 @@ th {
         align-content: center;
         margin: 2vh;
         padding: 2vh;
-        background-color: #191919;
+        background-color: rgba(25, 25, 25, 0.77);
         border: 1px solid #dddddd;
         border-radius: 5px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
