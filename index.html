@@ -6,9 +6,14 @@
         <!-- The title for the website page -->
         <title>Home</title>
         <link rel="stylesheet" type="text/css" href="res/css/ne.css">
+        <link rel="stylesheet" href="res/css/style.css">
     </head>
-    <body>
+    <body class="bg_body">
+        
         <nav class="nav_main">
+            <div id="animationContainer">
+        <!-- Characters of the tornado will be dynamically added here -->
+            </div>
             <span class="nav_main_side_menu_button" onclick="openNav()">&#9776;</span>
             <div class="nav_main_links">
                 <!-- Hyperlink to the About Me page */ -->
@@ -17,14 +22,15 @@
                 <a href="https://elimagic.github.io/NEmagic/">Home</a>
             </div>        
         </nav>
+        <div id="animationContainer">
+        <!-- Characters of the tornado will be dynamically added here -->
+        </div>
         <div>
             <nav id="mySidenav" class="nav_side">
                 <div class="closebtn_side">
                     <div onclick="closeNav()">&times;</div>
                 </div>
                 <h1 class="h1_side">Subjects</h1>
-                <!-- Hyperlink to the Studies page  -->
-                <a class="a_side" href="https://elimagic.github.io/NEmagic/breakout">Breakout Game</a>
                 <!-- Hyperlink to the Studies page  -->
                 <a class="a_side" href="https://elimagic.github.io/NEmagic/under_construction">Studies</a>
                 <!-- Hyperlink to the Marketplaces page */ -->
@@ -36,13 +42,11 @@
             </nav>
             <section class="section_home">
                 <!-- Information about the website -->
-                <header>
-                    <!-- Hyperlink to the image neLogo.gif -->
-                    <!-- Displaying an image of a logo that I created */ -->
-                    <img class="home_header_img" src="res/images/ne_Logo.gif" alt="My Logo">
+                <header class="header_home">
+                    <h1 class="article_home_h1">Creative Developer</h1>
                 </header>
                 <article>
-                    <h1 class="article_home_h1">Creative Developer</h1>
+                    
                     <hr class="article_home_hr">
                     <div class="div_home_p">
                         <p>Independent developer for sites, graphics, games, and apps</p>
@@ -51,19 +55,19 @@
                         <div class="div_home_a">
                             <a class="a_home_box" href="https://elimagic.github.io/NEmagic/breakout">
                                 <div>
-                                    <img src="res/images/breakout.png" alt="Tools Icon">
+                                    <img src="res/images/breakout.png" alt="Breakout">
                                 </div>
                                 <div>
                                     <p>Breakout Game</p>
                                 </div>
                             </a>            
                             <!-- Hyperlink to the website's references page */ -->
-                            <a class="a_home_box" href="https://elimagic.github.io/NEmagic/web_code">
+                            <a class="a_home_box" href="https://elimagic.github.io/NEmagic/trafficracer">
                                 <div>
-                                    <img src="res/images/breakout.png" alt="Tools Icon">
+                                    <img src="res/images/trafficracer.png" alt="TrafficRacer">
                                 </div>
                                 <div>
-                                    <p>Breakout Game</p>
+                                    <p>Traffic Racer Game</p>
                                 </div>
                             </a>
                         </div>
@@ -75,5 +79,6 @@
             </section>
         </div>
         <script src="res/js/ne.js"></script>
+        <script src="res/js/spiral.js"></script>
     </body>
 </html>
