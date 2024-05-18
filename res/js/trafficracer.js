@@ -81,12 +81,10 @@ const obstacleSpeed2 = 3 * 2;
 const roadSpeed = 4 * 2;
 
 function isMobileDevice() {
-    
     return /Mobi|Android/i.test(navigator.userAgent);
 }
 
 function adjustCanvasSize() {
-    
     const margin = 0.05; // 5% margin
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
@@ -94,15 +92,18 @@ function adjustCanvasSize() {
     // Calculate canvas dimensions with margin
     if (isMobileDevice()) {
         // For mobile devices
-        canvasWidth = screenWidth - ((2 * margin * screenWidth) * 1.5); // 972
-        canvasHeight = screenHeight - ((2 * margin * screenHeight) * 2.5);
+        // canvasWidth = screenWidth - ((2 * margin * screenWidth) * 1.5); // 972
+        // canvasHeight = screenHeight - ((2 * margin * screenHeight) * 2.5);
+        canvasWidth = screenWidth - (2 * (margin - (margin * 0.05)) * screenWidth);
+        canvasHeight = screenHeight - (2 * margin * screenHeight);
+        
         // 640 px
         grassHeight = canvasHeight;
         // 640 px
         roadWidth = canvasWidth;
         
         carX = canvasWidth / 2; // Initial X position of the car
-        carY = canvasHeight - car_height - 50; // Y position of the car
+        carY = canvasHeight - car_height - 150; // Y position of the car
         
         lane_1 = canvasWidth * 0.2;
         lane_2 = canvasWidth * 0.35;
