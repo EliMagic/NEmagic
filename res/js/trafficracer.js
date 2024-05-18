@@ -102,7 +102,7 @@ function adjustCanvasSize() {
         // 640 px
         grassHeight = canvasHeight;
         // 640 px
-        roadWidth = canvasWidth - 2 * grassWidth;
+        roadWidth = canvasWidth;
         
         carX = canvasWidth / 2; // Initial X position of the car
         carY = canvasHeight - car_height - 50; // Y position of the car
@@ -153,8 +153,8 @@ function drawGrass() {
 function drawRoad() {
     
     if (isMobileDevice()) {
-        ctx.drawImage(road_image, grassWidth, roadOffsetY);
-        ctx.drawImage(road_image, grassWidth, roadOffsetY - canvasHeight);
+        ctx.drawImage(road_image, grassWidth, roadOffsetY, roadWidth, canvasHeight);
+        ctx.drawImage(road_image, grassWidth, roadOffsetY - canvasHeight, roadWidth, canvasHeight);
 
         roadOffsetY += roadSpeed;
         if ( roadOffsetY >= canvasHeight){
