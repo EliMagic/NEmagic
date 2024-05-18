@@ -94,8 +94,6 @@ function adjustCanvasSize() {
         // For mobile devices
         canvasWidth = screenWidth - (2 * (margin - (margin * 0.05)) * screenWidth);
         canvasHeight = screenHeight - (2 * margin * screenHeight);
-        // 160 px
-        lane_2_width = canvasWidth / 8; // Divide canvas into 2 lanes
         // 640 px
         grassHeight = canvasHeight;
         // 640 px
@@ -114,6 +112,7 @@ function adjustCanvasSize() {
         // For desktop devices
         canvasWidth = 1380; // Your default canvas width for desktop
         canvasHeight = 648; // Your default canvas height for desktop
+        // 320 px
         laneWidth = canvasWidth / 4; // Divide canvas into 4 lanes
         // 160 px
         lane_2_width = canvasWidth / 8; // Divide canvas into 2 lanes
