@@ -25,7 +25,7 @@ function adjustCanvasSize() {
 
 // Game settings
 const gravity = 0.5;
-const jumpPower = 10;
+const jumpPower = 8;
 const playerWidth = 20;
 const playerHeight = 20;
 const obstacleWidth = 20;
