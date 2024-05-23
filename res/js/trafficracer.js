@@ -183,6 +183,7 @@ function drawRoad() {
 function drawCar() {
     ctx.drawImage(car1, carX, carY, car_width, car_height);
     console.log(carX);
+            
 }
 
 function drawObstacles1() {
@@ -247,11 +248,20 @@ function generateObstacles2() {
 }
 
 function drawScore() {
-    ctx.font = "16px Arial";
-    ctx.fillStyle = "#ffffff";
-    ctx.fillText(score_name, 8, 20);
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText(score, 8 + ctx.measureText(score_name).width, 20);
+  // Draw UI
+  ctx.fillStyle = 'white';
+  ctx.font = '20px Arial';
+  ctx.fillText(`Score: ${score}`, 20, 30);
+}
+
+function gameOver() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'white';
+    ctx.font = '40px Arial';
+    ctx.fillText('Game Over', canvas.width / 2 - 100, canvas.height / 2 - 20);
+    ctx.font = '20px Arial';
+    ctx.fillText('Click to Restart', canvas.width / 2 - 70, canvas.height / 2 + 20);
 }
 
 function resetGame() {
@@ -266,6 +276,7 @@ function updateGame() {
         ctx.clearRect(0, 0, canvasWidth, canvasHeight);
         drawRoad();
         drawCar();
+        drawScore();
         generateObstacles1();
         generateObstacles2();
         if (detectCollision1() || detectCollision2()) {
